@@ -10,7 +10,7 @@ def dfs(graph, start):
             print(vertex, visited_order)
 
             for neighbour in reversed(graph[vertex]):
-                if neighbour not in stack or neighbour not in visited_order:
+                if neighbour not in stack and neighbour not in visited_order:
                     stack.append(neighbour)
 
     return visited_order
